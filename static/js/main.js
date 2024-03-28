@@ -206,9 +206,9 @@
 
   });
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.certification-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
+    let certificationContainer = select('.certification-container');
+    if (certificationContainer) {
+      let certificationIsotope = new Isotope(certificationContainer, {
         itemSelector: '.portfolio-item',
       });
     }
