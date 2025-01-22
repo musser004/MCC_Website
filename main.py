@@ -1,6 +1,6 @@
 # Professional Portfolio Website
 
-from flask import Flask, render_template, flash
+from flask import Flask, render_template, flash, redirect, url_for
 from flask_bootstrap import Bootstrap
 from forms import ContactForm
 from email_sender import EmailSender
@@ -34,8 +34,7 @@ def index():
         form.email.data = ""
         form.phone.data = ""
         form.message.data = ""
-    else:
-        return render_template("index.html", form=form, section="contact")
+        return redirect(url_for('index', _anchor='contact'))
     return render_template("index.html", form=form)
 
 # Flask run
